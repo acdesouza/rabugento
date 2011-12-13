@@ -13,27 +13,45 @@
 	<h2 id="site-brand">O seu site de <span>#mimimi</span> coletivo</h2>
 
 	<div id="main">
-		<div class="mimimi-box">
-			<h3 class="mimimi-box-title">#mimimis da última hora</h3>
-		</div>
+		<div class="mimimi-box featured">
+			<h3 class="mimimi-box-title">#mimimis da última hora</h3>	
+		</div><!-- .mimimi-box -->
 
 		<h3 class="by-subject">#mimimis por assunto...</h3>
 
-		<div class="subject-box first">
+		<div class="mimimi-box first">
 			<h3 class="mimimi-box-title">#vdm</h3>
-		</div>
-		
-		<div class="subject-box">
+
+			<ul>
+				<li class="mimimi">
+					<img src="https://twimg0-a.akamaihd.net/profile_images/1143673940/twitteravatar2_mini.jpg"/>
+					<p>
+						Entao somos 2! Ta foda nego veio! <a href="#">#reclamao</a> <a href="#">#mimimi</a>
+						RT @marcelotust: recém começando a noite de trabalho!
+						<span class="by">&mdash; <a href="#">@roxmo</a></span></p>
+				</li>
+				<li class="mimimi">
+					<img src="https://twimg0-a.akamaihd.net/profile_images/1143673940/twitteravatar2_mini.jpg"/>
+					<p>
+						A celebração da mediocridade #esquenta <a href="#">#mimimi</a>
+						<span class="by">&mdash; <a href="#">@roxmo</a></span>
+					</p>
+				</li>
+			</ul>
+		</div><!-- .mimimi-box -->
+
+		<div class="mimimi-box">
 			<h3 class="mimimi-box-title">#fail</h3>
-		</div>
-		
-		<div class="subject-box">
+		</div><!-- .mimimi-box -->
+
+		<div class="mimimi-box">
 			<h3 class="mimimi-box-title">#porra</h3>
-		</div>
-		
-		<div class="subject-box">
+		</div><!-- .mimimi-box -->
+
+		<div class="mimimi-box">
 			<h3 class="mimimi-box-title">#aff</h3>
-		</div>
+		</div><!-- .mimimi-box -->
+
 		<%= yield %>
 	</div>
 </div>

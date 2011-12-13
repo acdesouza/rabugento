@@ -3,15 +3,32 @@ body {
   margin: 0;
   font: normal 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #404040;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+a {
+  color: #09C;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 #site-title {
   font: 32px/40px Marmelad;
   margin: 10px 0 5px 0;
+  float: left;
 }
 
-#site-brand span {
-  font-style: italic;
+#site-brand {
+  margin: 10px 0 0 5px;
+  line-height: 40px;
+  float: left;
+
+  span {
+    font-style: italic;
+  }
 }
 
 #container {
@@ -20,38 +37,67 @@ body {
 }
 
 #main {
+  clear: both;
   padding: 15px 0;
 }
 
-.mimimi-box,
-.subject-box {
-  height: 100px;
-  padding: 10px;
+.mimimi-box {
+  width: 221px;
+  height: 200px;
+  float: left;
+  margin-left: 5px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   border: 1px solid #ddd;
+  background: #fafafa;
   background-image: -moz-linear-gradient(top, #fafafa, #f0f0f0);
+  background-image: -webkit-linear-gradient(top, #fafafa, #f0f0f0);
+  background-image: -ms-linear-gradient(top, #fafafa, #f0f0f0);
+  background-image: linear-gradient(top, #fafafa, #f0f0f0);
+  -moz-box-shadow: 0 0 5px #EAEAEA;
+  -webkit-box-shadow: 0 0 5px #EAEAEA;
+  box-shadow: 0 0 5px #EAEAEA;
   margin-bottom: 15px;
+/*
+  &:hover {
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    border-color: #ccc;
+  }
+*/
+  &.first {
+    margin-left: 0;
+  }
+
+  &.featured {
+    margin-left: 0;
+    height: 120px;
+    width: auto;
+    float: none;
+  }
 }
 
 .mimimi-box-title {
-  margin: -10px -10px 0 -10px;
+  margin: 0;
   border-bottom: 1px solid #eee;
   padding: 5px;
   color: #777;
 }
 
-.subject-box {
-  height: 200px;
-  width: 221px;
-  float: left;
-  margin-left: 5px;
-  -moz-box-sizing: border-box;
-
-  &.first {
-    margin-left: 0;
-  }
-}
-
 h3.by-subject {
   font: italic 15px/20px Marmelad;
   margin: 0 0 10px 10px;
+}
+
+.mimimi {
+  border-bottom: 1px dashed #ddd;
+  padding: 5px;
+  position: relative;
+
+  img {
+    float: left;
+    margin: 3px 3px 0 0;
+  }
 }
