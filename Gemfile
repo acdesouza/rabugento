@@ -20,4 +20,15 @@ group :development, :test do
   # Pretty printed test output
   # gem 'turn', '0.8.2', :require => false
   gem 'sqlite3'
+
+  gem 'ZenTest'
+  gem 'autotest-rails'
+
+  if RUBY_PLATFORM =~ /darwin/i
+    gem 'autotest-growl'
+    gem 'autotest-fsevent', :require => false
+  elsif RUBY_PLATFORM =~ /linux/i
+    gem "libnotify"
+    gem "rb-inotify"
+  end
 end
