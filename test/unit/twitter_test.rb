@@ -3,8 +3,7 @@ require 'test_helper'
 
 class TwitterTest < ActiveSupport::TestCase
   test 'should read #mimimi\'s from twitter' do
-    twitter = Twitter.new
-    mimimis = twitter.mimimis
+    mimimis = Twitter.mimimis
 
     refute_nil mimimis
     mimimis.each do |tweet|

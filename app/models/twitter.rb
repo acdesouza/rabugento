@@ -2,7 +2,7 @@ require 'json'
 require 'net/http'
 
 class Twitter
-  def mimimis
+  def self.mimimis
     base_url = "http://search.twitter.com/search.json?q="
     url = "#{base_url}\#mimimi"
 
