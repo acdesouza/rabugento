@@ -1,5 +1,5 @@
 body {
-  background-color: #eee;
+  background-color: #f3f3f3;
   margin: 0;
   font: normal 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #404040;
@@ -7,10 +7,51 @@ body {
 
 #site-title {
   font: 32px/40px Marmelad;
-  margin: 10px 0;
+  margin: 10px 0 5px 0;
+}
+
+#site-brand span {
+  font-style: italic;
 }
 
 #container {
   width: 900px;
   margin: 0 auto;
+}
+
+#main {
+  padding: 15px 0;
+}
+
+.mimimi-box,
+.subject-box {
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-image: -moz-linear-gradient(top, #fafafa, #f0f0f0);
+  margin-bottom: 15px;
+}
+
+.mimimi-box-title {
+  margin: -10px -10px 0 -10px;
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+  color: #777;
+}
+
+.subject-box {
+  height: 200px;
+  width: 221px;
+  float: left;
+  margin-left: 5px;
+  -moz-box-sizing: border-box;
+
+  &.first {
+    margin-left: 0;
+  }
+}
+
+h3.by-subject {
+  font: italic 15px/20px Marmelad;
+  margin: 0 0 10px 10px;
 }

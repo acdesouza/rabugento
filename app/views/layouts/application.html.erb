@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Rabugento</title>
-	<link href='http://fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'/>
+	<link href="http://fonts.googleapis.com/css?family=Marmelad" rel="stylesheet" type="text/css"/>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -13,6 +13,27 @@
 	<h2 id="site-brand">O seu site de <span>#mimimi</span> coletivo</h2>
 
 	<div id="main">
+		<div class="mimimi-box">
+			<h3 class="mimimi-box-title">#mimimis da última hora</h3>
+		</div>
+
+		<h3 class="by-subject">#mimimis por assunto...</h3>
+
+		<div class="subject-box first">
+			<h3 class="mimimi-box-title">#vdm</h3>
+		</div>
+		
+		<div class="subject-box">
+			<h3 class="mimimi-box-title">#fail</h3>
+		</div>
+		
+		<div class="subject-box">
+			<h3 class="mimimi-box-title">#porra</h3>
+		</div>
+		
+		<div class="subject-box">
+			<h3 class="mimimi-box-title">#aff</h3>
+		</div>
 		<%= yield %>
 	</div>
 </div>
