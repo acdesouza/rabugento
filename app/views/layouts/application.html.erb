@@ -2,13 +2,19 @@
 <html>
 <head>
   <title>Rabugento</title>
+	<link href='http://fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'/>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="container">
+	<h1 id="site-title">Rabugento</h1>
+	<h2 id="site-brand">O seu site de <span>#mimimi</span> coletivo</h2>
 
-<%= yield %>
-
+	<div id="main">
+		<%= yield %>
+	</div>
+</div>
 </body>
 </html>

@@ -5,12 +5,17 @@ gem 'jquery-rails'
 
 gem 'heroku'
 
+group :assets do
+	gem 'sass'
+end
+
 group :production do
   gem 'pg'
 end
+
 group :development, :test do
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+	# To use debugger
+	# gem 'ruby-debug19', :require => 'ruby-debug'
 
   # Pretty printed test output
   # gem 'turn', '0.8.2', :require => false
