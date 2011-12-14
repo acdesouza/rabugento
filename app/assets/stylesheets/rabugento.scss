@@ -31,9 +31,41 @@ a {
   }
 }
 
-header, #container, footer {
+header, #container {
   width: 900px;
   margin: 0 auto;
+}
+
+header h1 a {
+	color: #404040;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+footer {
+	border-top: 1px solid #999;
+	width: 100%;
+	background-color: #FFF;
+	position: fixed;
+	bottom: 0px;
+	padding: 5px 10px 2px;
+
+	.links {
+		float: right;
+		margin-right: 20px;
+
+		a {
+			color: #404040;
+			text-decoration: none;
+			margin-left: 3px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 #main {
