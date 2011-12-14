@@ -19,5 +19,48 @@ jQuery(document).ready(function() {
 		error: function() {
 		}
 	})
-
+// Carregar os vdms
+	$.ajax({
+		url: "/vdms",
+		type: "GET",
+		dataType: "html",
+		success: function(data, textStatus, xhr) {
+			$('#vdms-featured').append(data);
+		},
+		error: function() {
+		}
+	})
+// Carregar os fails
+	$.ajax({
+		url: "/fails",
+		type: "GET",
+		dataType: "html",
+		success: function(data, textStatus, xhr) {
+			$('#fails-featured').append(data);
+		},
+		error: function() {
+		}
+	})
+// Carregar os porras
+	$.ajax({
+		url: "/porras",
+		type: "GET",
+		dataType: "html",
+		success: function(data, textStatus, xhr) {
+			$('#porras-featured').append(data);
+		},
+		error: function() {
+		}
+	})
+// Carregar os affs
+	$.ajax({
+		url: "/affs",
+		type: "GET",
+		dataType: "html",
+		success: function(data, textStatus, xhr) {
+			$('#affs-featured').append(data);
+		},
+		error: function() {
+		}
+	})
 });
