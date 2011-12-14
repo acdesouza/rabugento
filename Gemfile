@@ -24,11 +24,12 @@ group :development, :test do
   gem 'ZenTest'
   gem 'autotest-rails'
 
-  if RUBY_PLATFORM =~ /darwin/i
-    gem 'autotest-growl'
-    gem 'autotest-fsevent', :require => false
-  elsif RUBY_PLATFORM =~ /linux/i
-    gem "libnotify"
-    gem "rb-inotify"
-  end
+  ## Brokes Heroku. Install without change Gemfile.lock
+  #if RUBY_PLATFORM =~ /darwin/i
+    #gem 'autotest-growl'
+    #gem 'autotest-fsevent', :require => false
+  #elsif RUBY_PLATFORM =~ /linux/i
+    #gem "libnotify"
+    #gem "rb-inotify"
+  #end
 end
