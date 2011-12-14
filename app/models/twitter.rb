@@ -4,59 +4,33 @@ require 'net/http'
 class Twitter
 
   def self.mimimis
-    base_url = "http://search.twitter.com/search.json?locale=pt&lang=pt&rpp=100&q="
-    url = "#{base_url}\#mimimi"
-    puts url  
-    resp = Net::HTTP.get_response(URI.parse(URI.encode(url)))
-    data = resp.body
-    result = JSON.parse(data)
-    result_as_tweets = result['results'].collect do |hash_tweet|
-      Tweet.new hash_tweet
-    end
+    self.search_by(:mimimi)
   end
   
-  def self.affs  
-    base_url = "http://search.twitter.com/search.json?locale=pt&lang=pt&rpp=100&q="
-    url = "#{base_url}\#aff"
-    resp = Net::HTTP.get_response(URI.parse(URI.encode(url)))
-    data = resp.body
-    result = JSON.parse(data)
-
-    result_as_tweets = result['results'].collect do |hash_tweet|
-      Tweet.new hash_tweet
-    end
+  def self.affs
+    self.search_by(:aff)
   end
   
   def self.fails
-    base_url = "http://search.twitter.com/search.json?locale=pt&lang=pt&rpp=100&q="
-    url = "#{base_url}\#fail"
-    resp = Net::HTTP.get_response(URI.parse(URI.encode(url)))
-    data = resp.body
-    result = JSON.parse(data)
-    result_as_tweets = result['results'].collect do |hash_tweet|
-      Tweet.new hash_tweet
-    end
+    self.search_by(:fail)
   end
   
   def self.vdms
-    base_url = "http://search.twitter.com/search.json?locale=pt&lang=pt&rpp=100&q="
-    url = "#{base_url}\#vdm"
-    resp = Net::HTTP.get_response(URI.parse(URI.encode(url)))
-    data = resp.body
-    result = JSON.parse(data)
-
-    result_as_tweets = result['results'].collect do |hash_tweet|
-      Tweet.new hash_tweet
-    end
+    self.search_by(:vdm)
   end
+
   def self.porras
+    self.search_by(:porra)
+  end
+  
+  def self.search_by(term)
     base_url = "http://search.twitter.com/search.json?locale=pt&lang=pt&rpp=100&q="
-    url = "#{base_url}\#porra"
+    url = "#{base_url}\##{term}"
     resp = Net::HTTP.get_response(URI.parse(URI.encode(url)))
     data = resp.body
     result = JSON.parse(data)
 
-    result_as_tweets = result['results'].collect do |hash_tweet|
+    result['results'].collect do |hash_tweet|
       Tweet.new hash_tweet
     end
   end
