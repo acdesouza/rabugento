@@ -3,13 +3,27 @@ class Tweet
     @from_hash = hash
   end
 
-  def text
-    @from_hash['text']
+  def name
+    self.from_user_name
   end
-  def profile_image_url
-    @from_hash['profile_image_url']
+  
+  def url
+    "http://twitter.com/#{from_user}/status/#{id}"
   end
-  def from_user
-    @from_hash['from_user']
+  
+  def method_missing(meth, *args, &blk)
+    if args.length == 0 && !block_given? && @from_hash.keys.include?(meth.to_s)
+      @from_hash[meth.to_s]
+    else
+      super(meth, args, &blk)
+    end
+  end
+  
+  def respond_to?(meth)
+    if @from_hash.keys.include?(meth.to_s)
+      return true
+    else
+      super(meth)
+    end
   end
 end
