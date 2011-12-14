@@ -5,8 +5,10 @@ gem 'jquery-rails'
 
 gem 'heroku'
 
+gem "rails_autolink"
+
 group :assets do
-	gem 'sass'
+  gem 'sass'
   gem 'uglifier'
 end
 
@@ -15,22 +17,9 @@ group :production do
 end
 
 group :development, :test do
-	# To use debugger
-	# gem 'ruby-debug19', :require => 'ruby-debug'
-
-  # Pretty printed test output
-  # gem 'turn', '0.8.2', :require => false
+  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'sqlite3'
 
   gem 'ZenTest'
   gem 'autotest-rails'
-
-  ## Brokes Heroku. Install without change Gemfile.lock
-  #if RUBY_PLATFORM =~ /darwin/i
-    #gem 'autotest-growl'
-    #gem 'autotest-fsevent', :require => false
-  #elsif RUBY_PLATFORM =~ /linux/i
-    #gem "libnotify"
-    #gem "rb-inotify"
-  #end
 end
