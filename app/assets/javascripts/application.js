@@ -18,7 +18,7 @@ jQuery(document).ready(function() {
 		},
 		error: function() {
 		}
-	})
+	});
 // Carregar os vdms
 	$.ajax({
 		url: "/vdms",
@@ -29,7 +29,7 @@ jQuery(document).ready(function() {
 		},
 		error: function() {
 		}
-	})
+	});
 // Carregar os fails
 	$.ajax({
 		url: "/fails",
@@ -40,7 +40,7 @@ jQuery(document).ready(function() {
 		},
 		error: function() {
 		}
-	})
+	});
 // Carregar os porras
 	$.ajax({
 		url: "/porras",
@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
 		},
 		error: function() {
 		}
-	})
+	});
 // Carregar os affs
 	$.ajax({
 		url: "/affs",
@@ -62,5 +62,5 @@ jQuery(document).ready(function() {
 		},
 		error: function() {
 		}
-	})
+	});
 });
