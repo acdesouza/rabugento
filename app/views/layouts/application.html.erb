@@ -4,49 +4,24 @@
   <title>Rabugento</title>
 	<link href="http://fonts.googleapis.com/css?family=Marmelad" rel="stylesheet" type="text/css"/>
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="container">
-	<h1 id="site-title">Rabugento</h1>
-	<h2 id="site-brand">O seu site de <span>#mimimi</span> coletivo</h2>
+	<header>
+		<h1 id="site-title">Rabugento</h1>
+		<h2 id="site-brand">O seu site de <span>#mimimi</span> coletivo</h2>
+	</header>
 
-	<div id="main">
-		<div id="featured" class="mimimi-box featured">
-			<h3 class="title">#mimimis da última hora</h3>
-      <div class="scroller" id="mimimis-featured">
-      </div>
-		</div><!-- .mimimi-box -->
-
-		<h3 class="by-subject">#mimimis por assunto...</h3>
-
-		<div class="mimimi-box first">
-			<h3 class="title">#vdm</h3>
-			<div class="scroller" id="vdms-featured">
-			</div>
-		</div><!-- .mimimi-box -->
-
-		<div class="mimimi-box">
-			<h3 class="title">#fail</h3>
-			<div class="scroller" id="fails-featured">
-			</div>
-		</div><!-- .mimimi-box -->
-
-		<div class="mimimi-box">
-			<h3 class="title">#porra</h3>
-			<div class="scroller" id="porras-featured">
-			</div>
-		</div><!-- .mimimi-box -->
-
-		<div class="mimimi-box">
-			<h3 class="title">#aff</h3>
-			<div class="scroller" id="affs-featured">
-			</div>
-		</div><!-- .mimimi-box -->
-
+	<div id="container">
 		<%= yield %>
 	</div>
-</div>
+
+	<footer>
+		2011 &copy; - Todos os direitos reservadis a seus idealizadores
+	</footer>
+
+	<%= javascript_include_tag "application" %>
+
+	<%= render :partial => "analytics" %>
 </body>
 </html>

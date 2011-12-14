@@ -31,7 +31,7 @@ a {
   }
 }
 
-#container {
+header, #container, footer {
   width: 900px;
   margin: 0 auto;
 }
@@ -42,7 +42,7 @@ a {
 }
 
 .mimimi-box {
-  width: 221px;
+  width: 217px;
   height: 200px;
 
 
@@ -80,6 +80,8 @@ a {
     float: none;
   }
 }
+
+#by-subjects { clear: both; }
 
 .mimimi-box > .title {
   margin: 0;
