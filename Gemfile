@@ -7,6 +7,7 @@ gem 'heroku'
 
 group :assets do
 	gem 'sass'
+  gem 'uglifier'
 end
 
 group :production do
