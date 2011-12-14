@@ -7,3 +7,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+jQuery(document).ready(function() {
+// Carregar os mimimis
+	$.ajax({
+		url: "/mimimis",
+		type: "GET",
+		dataType: "html",
+		success: function(data, textStatus, xhr) {
+			$('#mimimis-featured').append(data);
+		},
+		error: function() {
+		}
+	})
+
+});

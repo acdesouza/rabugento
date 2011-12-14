@@ -5,10 +5,8 @@ class MimimisControllerTest < ActionController::TestCase
     get :mimimis
     assert_response :success
 
-    assert_select 'ul#mimimis' do
-      assert_select 'li.mimimi' do
-        assert_select 'li', 15
-      end
+    assert_select 'li.mimimi' do
+      assert_select 'li', 15
     end
   end
 end

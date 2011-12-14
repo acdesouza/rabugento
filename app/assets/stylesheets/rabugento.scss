@@ -44,6 +44,8 @@ a {
 .mimimi-box {
   width: 221px;
   height: 200px;
+
+
   float: left;
   margin-left: 5px;
   -webkit-box-sizing: border-box;
@@ -73,25 +75,25 @@ a {
 
   &.featured {
     margin-left: 0;
-    height: 120px;
+    height: 200px;
     width: auto;
     float: none;
   }
 }
 
-.mimimi-box-title {
+.mimimi-box > .title {
   margin: 0;
   border-bottom: 1px solid #eee;
   padding: 5px;
   color: #777;
 }
 
-h3.by-subject {
-  font: italic 15px/20px Marmelad;
-  margin: 0 0 10px 10px;
+.mimimi-box .scroller {
+  height:169px;
+  overflow: scroll;
 }
 
-.mimimi {
+.mimimi-box .mimimis {
   border-bottom: 1px dashed #ddd;
   padding: 5px;
   position: relative;
@@ -101,3 +103,9 @@ h3.by-subject {
     margin: 3px 3px 0 0;
   }
 }
+
+h3.by-subject {
+  font: italic 15px/20px Marmelad;
+  margin: 0 0 10px 10px;
+}
+
