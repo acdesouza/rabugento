@@ -11,8 +11,9 @@
 		<h1 id="site-title"><%= link_to "Rabugento", root_path, :title => "Ir para a página principal" %></h1>
 		<h2 id="site-brand">O seu site de <span>#mimimi</span> coletivo</h2>
 	</header>
-
 	<div id="container">
+	  <br />
+	  <div>&nbsp;&nbsp;<%= render 'twitter_share_button' %><%= render 'twitter_follow_button' %></div>
 		<%= yield %>
 	</div>
 

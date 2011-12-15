@@ -17,7 +17,8 @@ group :production do
 end
 
 group :development, :test do
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'pry'
+  gem 'pry-doc'
   gem 'sqlite3'
 
   gem 'ZenTest'
