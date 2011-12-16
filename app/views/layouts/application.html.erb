@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rabugento</title>
+	<title><%= @title ? "#{@title} - " : "" %>Rabugento</title>
+	<%= meta_description %>
+	<%= csrf_meta_tags %>
 	<link href="http://fonts.googleapis.com/css?family=Marmelad" rel="stylesheet" type="text/css"/>
-  <%= stylesheet_link_tag    "application" %>
-  <%= csrf_meta_tags %>
+	<%= stylesheet_link_tag    "application" %>
 </head>
 <body>
 	<header>
 		<h1 id="site-title"><%= link_to "Rabugento", root_path, :title => "Ir para a página principal" %></h1>
-		<h2 id="site-brand">O seu site de <span>#mimimi</span> coletivo</h2>
+		<p id="site-brand">O seu site de <span>#mimimi</span> coletivo</p>
+		<ul>
+			<li><%= render 'twitter_share_button' %></li>
+			<li><%= render 'twitter_follow_button' %></li>
+		</ul>
 	</header>
 	<div id="container">
-	  <br />
-	  <div>&nbsp;&nbsp;<%= render 'twitter_share_button' %><%= render 'twitter_follow_button' %></div>
 		<%= yield %>
 	</div>
-
 	<footer>
 		2011 &copy; - Todos os direitos reservados a seus idealizadores
-		<span class="links">
-			<%= link_to "Home", root_path %>
-			<%= link_to "Sobre o rabugento", about_path %>
-		</span>
+		<ul class="links">
+			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "Sobre o rabugento", about_path %></li>
+		</ul>
 	</footer>
-
 	<%= javascript_include_tag "application" %>
-
 	<%= render :partial => "analytics" %>
 </body>
 </html>

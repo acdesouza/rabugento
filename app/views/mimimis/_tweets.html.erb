@@ -1,7 +1,5 @@
-<div style="display:block; text-align:left;">
+<div class="tweet">
 	<%= image_tag tweet.profile_image_url %>
-	<%= tweet.from_user%>:
-	<%= auto_link(tweet.text) %>
-	<span><%= link_to time_ago_in_words(tweet.created_at.to_time), tweet.url %></span>
+	<p class="status"><span><%= tweet.from_user%></span> <%= auto_link(tweet.text) %></p>
+	<p class="when"><%= link_to time_ago_in_words(tweet.created_at.to_time), tweet.url %></p>
 </div>
-<hr />

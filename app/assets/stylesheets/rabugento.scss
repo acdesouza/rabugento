@@ -15,33 +15,47 @@ a {
   }
 }
 
-#site-title {
-  font: 32px/40px Marmelad;
-  margin: 10px 0 5px 0;
-  float: left;
-}
-
-#site-brand {
-  margin: 10px 0 0 5px;
-  line-height: 40px;
-  float: left;
-
-  span {
-    font-style: italic;
-  }
-}
-
 header, #container {
   width: 900px;
   margin: 0 auto;
 }
 
-header h1 a {
-	color: #404040;
+header {
+  height: 60px;
+  line-height: 60px;
 
-	&:hover {
-		text-decoration: none;
-	}
+  h1 {
+    font: 32px Marmelad;
+    letter-spacing: -3px;
+    margin: 10px 0 5px 0;
+    display: inline-block;
+
+    a {
+        color: #404040;
+
+        &:hover {
+          text-decoration: none;
+        }
+    }
+  }
+
+  #site-brand {
+    display: inline-block;
+    margin: 10px 0 0 5px;
+    line-height: 40px;
+
+    span {
+      font-style: italic;
+    }
+  }
+
+  ul {
+    float: right;
+
+    li {
+      float: left;
+    }
+  }
 }
 
 footer {
@@ -55,6 +69,11 @@ footer {
 	.links {
 		float: right;
 		margin-right: 20px;
+
+		li {
+			float: left;
+			margin-left: 10px;
+		}
 
 		a {
 			color: #404040;
@@ -77,7 +96,6 @@ footer {
   width: 221px;
   height: 200px;
 
-
   float: left;
   margin-left: 5px;
   -webkit-box-sizing: border-box;
@@ -93,14 +111,7 @@ footer {
   -webkit-box-shadow: 0 0 5px #EAEAEA;
   box-shadow: 0 0 5px #EAEAEA;
   margin-bottom: 15px;
-/*
-  &:hover {
-    -moz-box-shadow: 0 0 5px #ccc;
-    -webkit-box-shadow: 0 0 5px #ccc;
-    box-shadow: 0 0 5px #ccc;
-    border-color: #ccc;
-  }
-*/
+
   &.first {
     margin-left: 0;
   }
@@ -124,17 +135,28 @@ footer {
 
 .mimimi-box .scroller {
   height:169px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-.mimimi-box .mimimis {
+.mimimi-box .tweet {
   border-bottom: 1px dashed #ddd;
+  display: block;
+  min-height: 60px;
   padding: 5px;
-  position: relative;
+/*  position: relative;*/
+  text-align: left;
+
+  .status span {
+    font-weight: bold;
+    &:after { content: ": " ;}
+  }
 
   img {
     float: left;
     margin: 3px 3px 0 0;
+    height: 54px;
+    width: 54px;
   }
 }
 
@@ -142,4 +164,3 @@ h3.by-subject {
   font: italic 15px/20px Marmelad;
   margin: 0 0 10px 10px;
 }
-
